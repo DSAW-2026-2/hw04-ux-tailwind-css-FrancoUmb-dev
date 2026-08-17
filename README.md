@@ -1,3 +1,9 @@
+## Sitio publicado
+
+https://dsaw-2026-2.github.io/hw04-ux-tailwind-css-FrancoUmb-dev/
+
+Figma: https://www.figma.com/design/i0LHQGczrAGr6AqProBqJV/Proyecto-DSAW?node-id=0-1&t=ZS6t7uOzXtOQ8xty-1
+
 # HW04 — UX + Tailwind CSS
 
 **Week 4 · DSAW · Universidad de La Sabana**
