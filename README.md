@@ -1,3 +1,46 @@
+## Sitio publicado
+
+https://dsaw-2026-2.github.io/hw04-ux-tailwind-css-FrancoUmb-dev/
+
+Figma: https://www.figma.com/design/i0LHQGczrAGr6AqProBqJV/Proyecto-DSAW?node-id=0-1&t=ZS6t7uOzXtOQ8xty-1
+
+## Registro de uso de IA
+
+**Prompt utilizado:** le pedí a Claude que reconstruyera el `index.html`
+de HW03 usando solo clases de utilidad de Tailwind (vía CDN), con una
+paleta de colores personalizada igual a la identidad visual real del
+equipo (los mismos colores sacados de las capturas del Figma de
+Catalina), y un botón de modo oscuro que guardara la preferencia en
+`localStorage`.
+
+**Qué se mantuvo de la propuesta de la IA:** la configuración de
+colores en `tailwind.config` se mantuvo casi igual, porque ya coincidía
+con la paleta que el equipo había definido antes a partir del Figma
+real, no de una paleta genérica sin contexto del proyecto.
+
+**Cómo funciona el modo oscuro persistente:** un script en el `<head>`,
+antes de que cargue Tailwind, revisa `localStorage.getItem('theme')` y
+agrega la clase `dark` al `<html>` si corresponde — así se evita el
+parpadeo al recargar. El botón solo alterna esa clase y guarda la
+elección.
+
+**Errores reales y cómo los resolví:**
+1. La página daba 404 porque no había activado GitHub Pages en este
+   repo nuevo — no se hereda de tareas anteriores.
+2. Después de activarlo, seguía en 404 aunque Actions mostraba el
+   despliegue exitoso. La causa real fue el archivo llamado
+   `Index.html` en vez de `index.html`: como macOS no distingue
+   mayúsculas de minúsculas, un simple renombrado en VS Code no bastaba
+   — Git no registraba el cambio. Lo resolví renombrando en dos pasos
+   (`git mv Index.html temp.html`, commit; `git mv temp.html
+   index.html`, commit) para forzar a Git a grabar el nombre correcto.
+
+**Diferencia entre el syllabus general y el rubric.json real:** el
+syllabus general sugería "todas las pantallas" en Figma; el rubric.json
+real solo exige mínimo 3 pantallas distintas con un elemento mostrando
+3 estados (vacío, lleno, error). A la fecha de esta entrega el Figma
+tiene 2 de 3 — quedó documentado en el README en vez de ocultarlo.
+
 # HW04 — UX + Tailwind CSS
 
 **Week 4 · DSAW · Universidad de La Sabana**
